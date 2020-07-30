@@ -15,7 +15,7 @@ HexRouter.get("/", defaultRouteHandler);
  * Method: GET
  * Description: Returns a randomly colored image
  */
-HexRouter.get("/random", RandomHexColor)
+HexRouter.get("/:size?/random", RandomHexColor)
 
 
 /**

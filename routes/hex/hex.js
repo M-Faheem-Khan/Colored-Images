@@ -1,6 +1,6 @@
 const express = require("express");
 const HexRouter = express.Router(); // importing express router
-const { defaultRouteHandler, ProcessHexColor } = require("./hex.handler");
+const { defaultRouteHandler, ProcessHexColor, RandomHexColor } = require("./hex.handler");
 
 /**
  * Route: /hex/
@@ -10,13 +10,21 @@ const { defaultRouteHandler, ProcessHexColor } = require("./hex.handler");
 HexRouter.get("/", defaultRouteHandler);
 
 
+/**
+ * Route: /hex/random
+ * Method: GET
+ * Description: Returns a randomly colored image
+ */
+HexRouter.get("/random", RandomHexColor)
+
 
 /**
- * Route: /hex/:color/:?size
+ * Route: /hex/:size?/:color/
  * Method: GET
  * Description: Returns a default 150x150px jpeg image
  */
-HexRouter.get("/:color", ProcessHexColor)
+HexRouter.get("/:size?/:color", ProcessHexColor)
+
 
 
 // Exporting Hex Router

@@ -1,5 +1,5 @@
 // importing common functions
-const GenerateImage = require("../../lib/common");
+const { GenerateImage, GetRandomHexColor } = require("../../lib/common");
 
 /**
  * defaultRouteHandler
@@ -34,6 +34,29 @@ const ProcessHexColor = (request, response) => {
     response.end(image);
 }
 
+
+/**
+ * RandomHexColor
+ * Description: Returns Random Hex Color Image
+ */
+const RandomHexColor = (request, response) => {
+    const color = GetRandomHexColor(); // generating random color
+    var imageData = GenerateImage(color);
+    // removing the image identifier to create buffer
+    imageData = imageData.replace(/^data:image\/(png|jpeg|jpg);base64,/, '');
+    var image = Buffer.from(imageData, 'base64'); // creating base64 image buffer
+
+    // Creating Response
+    response.writeHead(200, {
+        'Content-Type': 'image/png',
+        'Content-Length': image.length
+    });
+    // Sending the Actual Image
+    response.end(image);
+}
+
+
 // Function Exports
 exports.defaultRouteHandler = defaultRouteHandler;
 exports.ProcessHexColor = ProcessHexColor;
+exports.RandomHexColor = RandomHexColor;

@@ -9,7 +9,6 @@ const { GenerateImage, GetRandomHexColor } = require("../../lib/common");
  * Description: Returns a description about the route
  */
 const defaultRouteHandler = (request, response) => {
-    console.log(request.originalUrl)
     response.status(200).send("HEX default route")
 }
 
@@ -67,9 +66,7 @@ const RandomHexColor = (request, response) => {
     const color = GetRandomHexColor(); // generating random color
     var size = request.params.size; // getting size
     var imageData; // holds the image data base64 encoded
-
-    console.log(`Color: ${color}`);
-    
+   
     // Checking if size is valid
     if (!size || size.length < 3) {
         imageData = GenerateImage(color);

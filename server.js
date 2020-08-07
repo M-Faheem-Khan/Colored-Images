@@ -5,8 +5,9 @@ const cors = require("cors"); // CORS
 
 // Todo: setup router for default '/' route
 
-// Importing Hex router
-const HexRouter = require("./routes/hex/hex")
+// Importing Hex & RGB routers
+const HexRouter = require("./routes/hex/hex");
+const RGBRouter = require("./routes/rgb/rgb");
 
 
 // CORS Settings
@@ -20,6 +21,7 @@ app.use(cors(corsOptions));
 
 // Setting routers
 app.use("/hex", HexRouter);
+app.use("/rgb", RGBRouter);
 
 // Starting Express server on PORT
 app.listen(PORT, () => {

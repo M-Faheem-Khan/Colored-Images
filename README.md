@@ -37,7 +37,7 @@ Colored Image is a simple server that generates single colored placeholder image
 
 # Api-Endpoints  
 [api.pbias.org/hex](http://api.pbias.org/hex/)  
-[api.pbias.org/hex](http://api.pbias.org/rgb/)  
+[api.pbias.org/rgb](http://api.pbias.org/rgb/)  
 
 
 
@@ -46,9 +46,11 @@ Colored Image is a simple server that generates single colored placeholder image
 - Do not add `#` in your url.  
 - If no size is passed in the url, image size will default to 150x150  
 
+
 ##### Getting Image with default size
 Get a hex colored imaged: `http://api.pbias.org/hex/{hex}`  
 Example: `http://api.pbias.org/hex/7FDBFF`  
+
 
 ##### Getting Image with a custom size
 Get a hex colored imaged with size 400x650: `http://api.pbias.org/hex/{size}/{hex}`  

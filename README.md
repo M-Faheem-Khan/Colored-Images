@@ -13,7 +13,7 @@ Colored Image is a simple server that generates single colored placeholder image
 | ![#F012BE](http://api.pbias.org/hex/30x30/F012BE) | #F012BE | http://api.pbias.org/hex/30x30/F012BE | 30x30 |   
 | ![random](http://api.pbias.org/hex/30x30/random)  | random | http://api.pbias.org/hex/30x30/random | 30x30 |   
 | ![random](http://api.pbias.org/hex/70x30/random)  | random | http://api.pbias.org/hex/30x30/random | 70x30 |   
-| ![random](http://api.pbias.org/hex/70x30/random)  | random | http://api.pbias.org/hex/30x30/random | 30x70 |  
+| ![random](http://api.pbias.org/hex/0x70/random)  | random | http://api.pbias.org/hex/30x30/random | 30x70 |  
 
 
 #### api.pbias.org/rgb/{size}/{color}  
